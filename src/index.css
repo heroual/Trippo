@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-trippo-black: #050505;
+  --color-trippo-gold: #D4AF37;
+  --color-trippo-sunset-start: #FF7A00;
+  --color-trippo-sunset-end: #FFB800;
+  --color-trippo-glass: rgba(255, 255, 255, 0.05);
+  --color-trippo-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--color-trippo-black);
+  color: white;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.glass-panel {
+  background: var(--color-trippo-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-trippo-glass-border);
+}
+
+.sunset-gradient-text {
+  background: linear-gradient(to right, var(--color-trippo-sunset-start), var(--color-trippo-sunset-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(to right, #F9D423, #FF4E50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-trippo-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-trippo-glass-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
